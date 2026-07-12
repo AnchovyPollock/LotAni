@@ -27,17 +27,18 @@
   <!-- 
     The core Web Component from the dotLottie player.
     It will render the .lottie file using the ThorVG engine.
-    <!--  src="./ilKsunum.lottie" -->
+    <!--  src="./firstanim.json" -->
 
   <dotlottie-player
-    id="lottiePlayer"
-    src="./firstanim.json"
+    id="dotlottiePlayer"
+    src="./ilKsunum.lottie"
     autoplay
     loop
     style="width: 400px; height: 400px;"
   ></dotlottie-player>
 <!-- Load the player globally from CDN -->
-  <script type="module" src="./libs/ThorLib/webgpu/dotlottie-player.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+  <!-- src="./libs/ThorLib/webgpu/dotlottie-player.js" -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
