@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThorVG Lottie Player</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    lottie-player {
+      width: 400px;
+      height: 400px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    The core Web Component from the dotLottie player.
+    It will render the .lottie file using the ThorVG engine.
+  -->
+  <lottie-player
+    id="lottiePlayer"
+    src="ilKsunum.lottie"
+    autoplay
+    loop
+    style="width: 400px; height: 400px;"
+  ></lottie-player>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
