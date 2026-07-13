@@ -22,13 +22,13 @@
   </style>
 </head>
 <body>
-  <h1>Surum 1.0</h1>  
+  <h2>ThorgVG + mp3 1.1</h2>  
   
   <!-- 
     The core Web Component from the dotLottie player.
     It will render the .lottie file using the ThorVG engine. -->
 
-<!-- player name dotlottie-wc has to be same with loaded script name  .../dist/dotlottie-wc.js  -->
+  <!-- player name dotlottie-wc has to be same with loaded script name  .../dist/dotlottie-wc.js  -->
   <dotlottie-wc
     id="dotlottiePlayer"
     src="./ilksunum.lottie"
@@ -36,7 +36,12 @@
     loop
     style="width: 400px; height: 400px;"
   ></dotlottie-wc>
-<!-- Load the player from Lottiefiles.com path from same EMBED code -->
+  <!-- Audio Player -->
+  <audio controls autoplay loop>
+      <source src="./Twinkle Little Star.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+  <!-- Load the player from Lottiefiles.com path from same EMBED code -->
   <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js"></script> 
   <script type="module" src="script.js"></script>
 </body>
