@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThorVG Lottie Player</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    dotlottie-player {
+      width: 400px;
+      height: 400px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Surum 1.0</h1>  
+  
+  <!-- 
+    The core Web Component from the dotLottie player.
+    It will render the .lottie file using the ThorVG engine. -->
+
+  <!-- player name dotlottie-wc has to be same with loaded script name  .../dist/dotlottie-wc.js  -->
+  <dotlottie-wc
+    id="dotlottiePlayer"
+    src="./ilksunum.lottie"
+    autoplay
+    loop
+    style="width: 400px; height: 400px;"
+  ></dotlottie-wc>
+  <!-- Audio Player -->
+  <audio controls autoplay loop>
+      <source src="./your-audio-file.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+  <!-- Load the player from Lottiefiles.com path from same EMBED code -->
+  <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js"></script> 
+  <script type="module" src="script.js"></script>
+</body>
+</html>
