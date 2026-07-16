@@ -39,3 +39,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 console.log('✅ dotLottie player started successfully.');
 });
+});
