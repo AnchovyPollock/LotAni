@@ -6,61 +6,23 @@
   <title>ThorVG Lottie Player with Audio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    dotlottie-wc {
-      width: 400px;
-      height: 400px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .audio-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .play-icon {
-      font-size: 24px;
-      cursor: pointer;
-      color: #333;
-    }
-    .play-icon:hover {
-      color: #007bff;
-    }
+    /* Your styles here */
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Sürüm 1.0</h1>
+    <h1>Sürüm 1.1</h1>
     <dotlottie-wc
       id="dotlottiePlayer"
       src="./gamersJourney.lottie"
       marker="Wizard"
       style="width: 630px; height: 420px;"
     ></dotlottie-wc>
-    <!-- autoplay=false
-      loop=false -->
-    <!-- Audio Player with Icon -->
+
     <div class="audio-controls">
       <i class="fas fa-play-circle play-icon" id="playAudio"></i>
       <audio id="audioPlayer" loop>
         <source src="./Twinkle Little Star.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
       </audio>
     </div>
   </div>
@@ -68,24 +30,7 @@
   <!-- Load the Lottie player -->
   <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js"></script>
   
-  <script>
-    const audio = document.getElementById('audioPlayer');
-    const playIcon = document.getElementById('playAudio');
-    const lotiplayer = document.getElementById('dotlottiePlayer');
-    const dotLottieInstance = lotiplayer.dotLottie;
-
-    playIcon.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play();
-        dotLottieInstance.play();
-        playIcon.className = 'fas fa-pause-circle play-icon';
-      } else {
-        audio.pause();
-        playIcon.className = 'fas fa-play-circle play-icon';
-      }
-    });
-  </script>
-  <!-- Finally Then load your custom script -->
+  <!-- Load your script -->
   <script src="./script.js"></script>
 </body>
 </html>
