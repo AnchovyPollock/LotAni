@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Set marker if available
             try {
                 if (typeof dotLottieInstance.setMarker === 'function') {
-                    dotLottieInstance.setMarker('Wizard');
+                    dotLottieInstance.setMarker('Orbit'); //Wizard
                     // dotLottieInstance.setSegment(250,400);                    
                     console.log('✅ Marker / segment set');
                     const markers = dotLottieInstance.markers(1);
