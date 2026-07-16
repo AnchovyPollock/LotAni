@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 if (typeof dotLottieInstance.setMarker === 'function') {
                     // dotLottieInstance.setMarker('Wizard');
-                    dotLottieInstance.segment(250,400);                    
+                    dotLottieInstance.setSegment(250,400);                    
                     console.log('✅ Marker / segment set');
                     const markers = dotLottie.markers();
                     console.log('🖊️'+markers); //
