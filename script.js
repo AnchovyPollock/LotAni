@@ -1,7 +1,13 @@
-// This module imports the web component from the official LottieFiles player.
-// The player is powered by a Rust + WASM core that uses ThorVG for rendering.
-  // import "https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.js"
-  //  "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/dist/dotlottie-player.mjs";
-  // your code here
 
-console.log('Lottie player loaded. Rendering using ThorVG via WASM.');
+// 1. Get a reference to the element
+const playerElement = document.getElementById('dotlottiePlayer');
+
+// 2. Ensure the component is ready before calling its methods
+// You might want to wait for the 'load' event or use a timeout.
+playerElement.addEventListener('load', () => {
+  // Access the dotLottie instance
+  const dotLottieInstance = playerElement.dotLottie;
+
+  // 3. Call the setMarker method with your marker name
+  dotLottieInst
+console.log('dotLottie player started successfully.');
