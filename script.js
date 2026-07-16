@@ -9,5 +9,5 @@ playerElement.addEventListener('load', () => {
   const dotLottieInstance = playerElement.dotLottie;
 
   // 3. Call the setMarker method with your marker name
-  dotLottieInst
+  dotLottieInstance.setMarker('Wizard');
 console.log('dotLottie player started successfully.');
