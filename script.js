@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // dotLottieInstance.setMarker('Wizard');
                     dotLottieInstance.setSegment(250,400);                    
                     console.log('✅ Marker / segment set');
-                    const markers = dotLottie.markers();
+                    const markers = dotLottieInstance.markers();
                     console.log('🖊️'+markers); //
                 }
             } catch (e) {
