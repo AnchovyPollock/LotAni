@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
         } catch (error) {
             console.error('❌ Lottie Area click Error:', error)
+            }
     });
     // Play button
     playIcon.addEventListener('click', function() {
