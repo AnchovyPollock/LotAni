@@ -22,8 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function initLottie() {
         if (lotiplayer.dotLottie) {
             dotLottieInstance = lotiplayer.dotLottie;
-            isReady = true;
-            console.log('✅ Lottie ready');
+            isReady = dotLottieInstance.isReady; //true;
+            if (dotLottieInstance.isReady) {
+                console.log('✅ Lottie ready');
+            } else {console.log('✅ player found but ❌ Player NOT ready!');}
             
             // Set marker if available
             try {
