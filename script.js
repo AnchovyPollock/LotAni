@@ -47,7 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return false;
     }
-
+    //Fired when the WASM module is loaded and the player is ready.
+    dotLottie.addEventListener('ready', () => {
+        console.log('Player is ready');
+        dotLottieInstance.autoplay = true;
+        dotLottieInstance.loop = true;
+        dotLottieInstance.play();
+    });
     // Try immediate init
     if (!initLottie()) {
         console.log('⏳ Waiting for load...');
