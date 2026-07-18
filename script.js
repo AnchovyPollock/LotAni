@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Lottie does not have a click event so code below needs to change
     lotiplayer.addEventListener('click', function() {
+        console.log('🔳🔳 Area click triggered🔳🔳');
         try {
             if (isReady && dotLottieInstance) {
                 dotLottieInstance.load();
