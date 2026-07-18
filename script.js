@@ -26,18 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let dotLottieInstance = null;
     let isReady = false;
-    //Fired when the WASM module is loaded and the player is ready.
-        lotiplayer.addEventListener('ready', () => {
-        isReady = dotLottieInstance.isReady; //true;
-        console.log('Player is ready');
-        dotLottieInstance.autoplay = true;
-        dotLottieInstance.loop = true;
-        dotLottieInstance.play();
-    });
-    lotiplayer.addEventListener('load', function() {
-           console.log('🎯 1st Load event fired!');
-           // initLottie(); 
-    });
 
     function initLottie() {
         if (lotiplayer.dotLottie) {
@@ -86,6 +74,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 } // else if
         else if (dotLottieInstance.isLoaded) {console.log('🎯 LOADED in 1st init');}
     //}}
+
+    // Lottie event attachments
+    //Fired when the WASM module is loaded and the player is ready.
+    if (isReady && dotLottieInstance) {
+        lotiplayer.addEventListener('ready', () => {
+            isReady = dotLottieInstance.isReady; //true;
+            console.log('Player is ready');
+            dotLottieInstance.autoplay = true;
+            dotLottieInstance.loop = true;
+            dotLottieInstance.play();
+        });
+        lotiplayer.addEventListener('load', function() {
+           console.log('🎯 1st Load event fired!');
+           // initLottie(); 
+        });
+    } // if (isready
 
     // Lottie click event
     lotiplayer.addEventListener('click', function() {
