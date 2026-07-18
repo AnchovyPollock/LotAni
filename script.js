@@ -74,9 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 lotiplayer.addEventListener('load', function() {
                 console.log('🎯 2nd Loaded event fired!');
             });
+        if (dotLottieInstance.isReady) {console.log('🎯 READY in 1st init');}
+        if (dotLottieInstance.isLoaded) {console.log('🎯 LOADED in 1st init');}
         }
 
-    // Lottie area Click event handler
+    // Lottie does not have a click event so code below needs to change
     lotiplayer.addEventListener('click', function() {
         try {
             if (isReady && dotLottieInstance) {
