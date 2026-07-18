@@ -72,9 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('⏳ init failed and Waiting for load event...');
         } else if (!dotLottieInstance.isLoaded) {
                 console.log('🎯 Lottie initatied but not Loaded so load event is listening!...');
-            }
-        if (dotLottieInstance.isReady) {console.log('🎯 READY in 1st init');}
-        if (dotLottieInstance.isLoaded) {console.log('🎯 LOADED in 1st init');}
+            } // else if
+        else {
+            if (dotLottieInstance.isReady) {console.log('🎯 READY in 1st init');}
+            if (dotLottieInstance.isLoaded) {console.log('🎯 LOADED in 1st init');}
+        }
     }
 
     // Lottie does not have a click event so code below needs to change
