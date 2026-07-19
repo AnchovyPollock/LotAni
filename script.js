@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
            // initLottie(); 
     });
     //Fired when the WASM module is loaded and the player is ready.
-    if (isReady && dotLottieInstance) {
+    if ((!isReady) && dotLottieInstance) {
         lotiplayer.addEventListener('☑️Ready💯🆗', () => {
             isReady = dotLottieInstance.isReady; //true;
             console.log('Player is ready');
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       lotiplayer.dispatchEvent(readySoftEvent);}, 700); // 700ms = 0.7 seconds
     setTimeout(() => {
-      lotiplayer.dispatchEvent(softEvent);}, 2000); // 2000ms = 2 seconds
+      lotiplayer.dispatchEvent(softEvent);}, 1200); // 1200ms = 1,2 seconds
     
     // Play button
     playIcon.addEventListener('click', function() {
