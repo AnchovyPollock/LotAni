@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const lotiplayer = document.getElementById('dotlottiePlayer');
     
     // Create a custom event with optional data
-    const softEvent = new CustomEvent('click', {  //customTrigger
+    const clickSoftEvent = new CustomEvent('click', {  //customTrigger
         detail: { source: "soft trigger" }
         });
     const readySoftEvent = new CustomEvent('ready', {  //customTrigger
@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     //Fired when the WASM module is loaded and the player is ready.
     if ((!isReady) && dotLottieInstance) {
-        lotiplayer.addEventListener('☑️Ready💯🆗', () => {
+        lotiplayer.addEventListener('ready', () => {
             isReady = dotLottieInstance.isReady; //true;
-            console.log('Player is ready');
+            console.log('Player is ☑️Ready💯🆗');
             dotLottieInstance.autoplay = true;
             dotLottieInstance.loop = true;
             dotLottieInstance.play();
@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Lottie click event
     lotiplayer.addEventListener('click', function() {
         console.log('🔳🔳 Area click triggered🔳🔳');
+        isReady = dotLottieInstance.isReady; //true or flase ?
         try {
             if (isReady && dotLottieInstance) {    
                 dotLottieInstance.setMarker('Orbit'); //Wizard
@@ -113,9 +114,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create a custom event with optional data
     // Dispatch it on the element
     setTimeout(() => {
-      lotiplayer.dispatchEvent(readySoftEvent);}, 700); // 700ms = 0.7 seconds
+      lotiplayer.dispatchEvent(readySoftEvent);}, 1700); // 1700ms = 1.7 seconds
     setTimeout(() => {
-      lotiplayer.dispatchEvent(softEvent);}, 1200); // 1200ms = 1,2 seconds
+      lotiplayer.dispatchEvent(clickSoftEvent);}, 1200); // 1200ms = 1,2 seconds
     
     // Play button
     playIcon.addEventListener('click', function() {
