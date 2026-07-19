@@ -76,6 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
     //}}
 
     // Lottie event attachments
+    lotiplayer.addEventListener('load', function() {
+           console.log('🎯 1st Load event fired!');
+           // initLottie(); 
+    });
     //Fired when the WASM module is loaded and the player is ready.
     if (isReady && dotLottieInstance) {
         lotiplayer.addEventListener('ready', () => {
@@ -84,10 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
             dotLottieInstance.autoplay = true;
             dotLottieInstance.loop = true;
             dotLottieInstance.play();
-        });
-        lotiplayer.addEventListener('load', function() {
-           console.log('🎯 1st Load event fired!');
-           // initLottie(); 
         });
     } // if (isready
 
