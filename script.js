@@ -109,6 +109,13 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('❌ Lottie Area click Error:', error)
             }
     });
+    
+    // Create a custom event with optional data
+    // Dispatch it on the element
+    
+    setTimeout(() => {
+      lotiplayer.dispatchEvent(softEvent);}, 2000); // 2000ms = 2 seconds
+    
     // Play button
     playIcon.addEventListener('click', function() {
         try {
@@ -149,9 +156,5 @@ document.addEventListener('DOMContentLoaded', function() {
             dotLottieInstance.stop();
         }
     });
-
-    // Create a custom event with optional data
-    // Dispatch it on the element
-    lotiplayer.dispatchEvent(softEvent);
     console.log('🎮 Setup complete');
 });
