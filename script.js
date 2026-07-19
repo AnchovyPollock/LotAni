@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const softEvent = new CustomEvent('click', {  //customTrigger
         detail: { source: "soft trigger" }
         });
-    const softEvent2 = new CustomEvent('click', {  //customTrigger
+    const readySoftEvent = new CustomEvent('ready', {  //customTrigger
         detail: { source: "soft trigger" }
         });
                 
@@ -77,12 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Lottie event attachments
     lotiplayer.addEventListener('load', function() {
-           console.log('🎯 1st Load event fired!');
+           console.log('🔚 1st Load event fired!');
            // initLottie(); 
     });
     //Fired when the WASM module is loaded and the player is ready.
     if (isReady && dotLottieInstance) {
-        lotiplayer.addEventListener('ready', () => {
+        lotiplayer.addEventListener('☑️Ready💯🆗', () => {
             isReady = dotLottieInstance.isReady; //true;
             console.log('Player is ready');
             dotLottieInstance.autoplay = true;
@@ -112,7 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create a custom event with optional data
     // Dispatch it on the element
-    
+    setTimeout(() => {
+      lotiplayer.dispatchEvent(readySoftEvent);}, 700); // 700ms = 0.7 seconds
     setTimeout(() => {
       lotiplayer.dispatchEvent(softEvent);}, 2000); // 2000ms = 2 seconds
     
