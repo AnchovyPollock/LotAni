@@ -1,6 +1,19 @@
 // script.js
 console.log('📝 script.js loaded');
 
+// define Audio Anime Mixer class
+class AudAniMixer {
+  constructor(lottie_instance) {
+    this.mixLottie = lottie_instance;
+    this.AudioList = [];
+  }
+  LoadAudFiles() { // load should be partial not a full load
+    // date = new Date();  // This will not work
+    const date = new Date(); // This will work
+    return date.getFullYear() - this.year;
+  }
+}
+
 // Wait for DOM
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM ready, setting up...');
