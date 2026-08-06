@@ -8,9 +8,15 @@ class AudAniMixer {
     this.AudioList = [];
   }
   LoadAudFiles() { // load should be partial not a full load
-    // date = new Date();  // This will not work
-    const date = new Date(); // This will work
-    return date.getFullYear() - this.year;
+    // audio loading starts asap aync from playback
+    // each file load kicks when prev one is loaded
+    if (this.mixLottie.isLoaded) {
+      if (this.AudioList is empty)
+      const date = new Date(); // This will work
+      return date.getFullYear() - this.year;
+    } else { 
+        console.log('Lottie is not loaded so audio load pending 🪶🥱😴');
+      }// else
   }
 }
 
